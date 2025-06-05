@@ -1,3 +1,20 @@
+/* 
+@media screen and (min-width: 1281px) and (max-width: 1536px) {
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+} 
+*/
+
 /* Reset default margin/padding */
 * {
   margin: 0;
@@ -5,6 +22,7 @@
   box-sizing: border-box;
 }
 
+/* Video Section */
 .ag-video-section {
   position: relative;
   height: 100vh;
@@ -36,7 +54,7 @@
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
-  background-color: #ff5733;
+  background-color: #9c0900;
   color: #fff;
   text-decoration: none;
   font-size: 18px;
@@ -45,8 +63,80 @@
 }
 
 .ag-cta-button:hover {
-  background-color: #e0461c;
+  background-color: #790d07;
 }
+
+@media screen and (max-width: 768px) {
+  .ag-video-section {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+  }
+  .ag-cta-button {
+    font-size: 14px;
+  }
+}
+
+
+/* Intro Section */
+.ag-intro-section, .ag-products-section{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+}
+
+.ag-intro-content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1280px;
+}
+
+
+/*  Product Section */
+
+
+.ag-products-section-wrapper {
+  display: flex;
+  max-width: 1280px;
+   overflow: hidden;
+}
+
+
+
+
+.card-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.card-link img{
+  margin-bottom: 30px;
+}
+
+.swiper-slide-button{
+  color: #9c0900 !important;
+  font-size: 14px !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+
+  color: #9c0900 !important;
+  font-size: 24px !important;
+}
+
+
+.swiper-pagination-bullet-active{
+  background-color: #9c0900 !important;
+}
+
+
+
+
 
 
 /* Counter Section */
@@ -70,7 +160,6 @@
   color: #333;
 }
 
-
 /* Reviews */
 .ag-reviews-section {
   padding: 40px 20px;
@@ -85,17 +174,15 @@
   position: relative;
 }
 
-
 .ag-reviews-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-
 .ag-review-card {
   background: white;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 10px;
   min-width: 100%;
