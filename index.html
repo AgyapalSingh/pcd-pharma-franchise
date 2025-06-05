@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="ag-video-section">
+      <video autoplay muted loop class="ag-bg-video">
+        <source
+          src="https://unibiotechformulations.in/wp-content/uploads/2024/02/Unibiotech-Formulations_Video.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="ag-overlay-content">
+        <a href="#cta" class="ag-cta-button">Get Started</a>
+      </div>
+    </section>
+
+    <section class="ag-counter-section">
+      <div class="ag-counter-box">
+        <div class="ag-counter" data-max="500">0</div>
+        <p>Clients</p>
+      </div>
+      <div class="ag-counter-box">
+        <div class="ag-counter" data-max="1200">0</div>
+        <p>Projects</p>
+      </div>
+      <div class="ag-counter-box">
+        <div class="ag-counter" data-max="800">0</div>
+        <p>Employees</p>
+      </div>
+      <div class="ag-counter-box">
+        <div class="ag-counter" data-max="300">0</div>
+        <p>Partners</p>
+      </div>
+    </section>
+
+    <section class="ag-reviews-section">
+      <div class="ag-reviews-wrapper">
+        <div class="ag-reviews-track">
+          <div class="ag-review-card">
+            <img
+              src="https://via.placeholder.com/60"
+              alt="Client"
+              class="ag-review-img"
+            />
+            <h4 class="ag-review-name">John Doe</h4>
+            <div class="ag-review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="ag-review-text">
+              Amazing service and great support. Highly recommended!
+            </p>
+          </div>
+
+          <div class="ag-review-card">
+            <img
+              src="https://via.placeholder.com/60"
+              alt="Client"
+              class="ag-review-img"
+            />
+            <h4 class="ag-review-name">Jane Smith</h4>
+            <div class="ag-review-stars">⭐⭐⭐⭐</div>
+            <p class="ag-review-text">
+              Good experience overall, would definitely use again.
+            </p>
+          </div>
+
+          <div class="ag-review-card">
+            <img
+              src="https://via.placeholder.com/60"
+              alt="Client"
+              class="ag-review-img"
+            />
+            <h4 class="ag-review-name">Alex Brown</h4>
+            <div class="ag-review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="ag-review-text">Excellent quality and fast delivery.</p>
+          </div>
+
+          <div class="ag-review-card">
+            <img
+              src="https://via.placeholder.com/60"
+              alt="Client"
+              class="ag-review-img"
+            />
+            <h4 class="ag-review-name">Emily Clark</h4>
+            <div class="ag-review-stars">⭐⭐⭐⭐</div>
+            <p class="ag-review-text">Very professional and friendly team.</p>
+          </div>
+
+          <div class="ag-review-card">
+            <img
+              src="https://via.placeholder.com/60"
+              alt="Client"
+              class="ag-review-img"
+            />
+            <h4 class="ag-review-name">Liam Johnson</h4>
+            <div class="ag-review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="ag-review-text">Top-notch services and support.</p>
+          </div>
+
+          <div class="ag-review-card">
+            <img
+              src="https://via.placeholder.com/60"
+              alt="Client"
+              class="ag-review-img"
+            />
+            <h4 class="ag-review-name">Sophie Wilson</h4>
+            <div class="ag-review-stars">⭐⭐⭐⭐</div>
+            <p class="ag-review-text">Very satisfied with the results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".ag-counter");
+
+    const animateCounter = (counter) => {
+      const max =
+        parseInt(counter.getAttribute("data-max")) ||
+        Math.floor(Math.random() * 1000) + 100;
+      let count = 0;
+      const speed = Math.floor(max / 100);
+
+      const updateCounter = () => {
+        if (count < max) {
+          count += speed;
+          counter.textContent = count > max ? max : count;
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = max;
+        }
+      };
+
+      updateCounter();
+    };
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            animateCounter(counter);
+            observer.unobserve(counter);
+          }
+        });
+      },
+      {
+        threshold: 0.6,
+      }
+    );
+
+    counters.forEach((counter) => {
+      observer.observe(counter);
+    });
+  });
+</script>
+
+
+<script>
+  const track = document.querySelector('.ag-reviews-track');
+  const cards = document.querySelectorAll('.ag-review-card');
+  const total = cards.length;
+
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  let index = 0;
+  const cardWidth = cards[0].offsetWidth + 20; 
+
+  const scrollReviews = () => {
+    index++;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+    if (index >= total) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(0)';
+        index = 0;
+      }, 500); 
+    }
+  };
+
+  setInterval(scrollReviews, 2000);
+</script>
+

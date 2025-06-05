@@ -1,0 +1,139 @@
+/* Reset default margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ag-video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.ag-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.ag-overlay-content {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.ag-cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff5733;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.ag-cta-button:hover {
+  background-color: #e0461c;
+}
+
+
+/* Counter Section */
+.ag-counter-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  flex-wrap: wrap;
+}
+
+.ag-counter-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.ag-counter {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* Reviews */
+.ag-reviews-section {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+.ag-reviews-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.ag-reviews-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.ag-review-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 10px;
+  min-width: 100%;
+  max-width: 100%;
+  width: 500px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.ag-review-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.ag-review-name {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.ag-review-stars {
+  color: #ffc107;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.ag-review-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive: 3 per row on desktop */
+@media screen and (min-width: 768px) {
+  .ag-review-card {
+    min-width: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
