@@ -198,3 +198,12 @@
 .ag-Certi-logos-infinite:hover .ag-logo-track {
   animation-play-state: paused;
 }
+
+@media screen and (max-width: 768px) {
+  .ag-Certi-content {
+    width: 95%;
+  }
+  .ag-Certi-logos-infinite {
+    width: 95%;
+  }
+}
