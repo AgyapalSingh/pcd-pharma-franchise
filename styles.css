@@ -281,6 +281,11 @@
 .ag-usp-content h2 {
   color: #790d07;
 }
+.ag-usp-content a{
+  text-decoration: none;
+  color: #790d07;
+  
+}
 
 .ag-usp-cool-numbers {
   display: grid;
