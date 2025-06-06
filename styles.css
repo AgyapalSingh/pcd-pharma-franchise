@@ -355,6 +355,10 @@
   .ag-usp-content {
     width: 95%;
   }
+  .ag-usp-content-sec {
+    width: 95%;
+     flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) {
