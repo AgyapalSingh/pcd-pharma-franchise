@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter-sec");
 
@@ -115,4 +114,43 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   counters.forEach((counter) => observer.observe(counter));
+});
+
+// FAQs - Accordion
+
+document.addEventListener("DOMContentLoaded", () => {
+  const headers = document.querySelectorAll(".accordion-header");
+
+  headers.forEach((header) => {
+    header.addEventListener("click", () => {
+      const currentlyOpen = document.querySelector(".accordion-content.open");
+      const iconOpen = document.querySelector(".accordion-header .icon.open");
+
+      const content = header.nextElementSibling;
+      const icon = header.querySelector(".icon");
+
+      // Close currently open if not the same one
+      if (currentlyOpen && currentlyOpen !== content) {
+        currentlyOpen.style.maxHeight = null;
+        currentlyOpen.classList.remove("open");
+
+        if (iconOpen) {
+          iconOpen.textContent = "+";
+          iconOpen.classList.remove("open");
+        }
+      }
+
+      // Toggle current
+      content.classList.toggle("open");
+      icon.classList.toggle("open");
+
+      if (content.classList.contains("open")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.textContent = "−";
+      } else {
+        content.style.maxHeight = null;
+        icon.textContent = "+";
+      }
+    });
+  });
 });
