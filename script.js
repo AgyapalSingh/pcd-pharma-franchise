@@ -30,3 +30,47 @@ new Swiper(".product-card-wrapper", {
     },
   },
 });
+
+// Cool Numbers
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+
+  const animateCounter = (el) => {
+    const target = parseInt(el.getAttribute("data-target"));
+    let current = 0;
+    const speed = target < 100 ? 1 : Math.ceil(target / 100);
+
+    const suffix = el.textContent.includes("%") ? "%" : "+";
+
+    const update = () => {
+      current += speed;
+      if (current >= target) {
+        el.textContent = target + suffix;
+      } else {
+        el.textContent = current + suffix;
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.6,
+    }
+  );
+
+  counters.forEach((el) => {
+    observer.observe(el);
+  });
+});

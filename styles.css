@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* 
 @media screen and (min-width: 1281px) and (max-width: 1536px) {
@@ -22,7 +22,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Video Section *************************************************************************************************************************************************************/
@@ -214,6 +214,7 @@
   width: 100%;
   background: #fff;
   padding: 20px 0;
+  padding-bottom: 30px;
 }
 
 .ag-logo-track {
@@ -253,5 +254,73 @@
   }
   .ag-Certi-logos-infinite {
     width: 95%;
+  }
+}
+
+/*  USP SECTION *************************************************************************************************************************************************************/
+.ag-usp-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  background-color: #f8f8f8;
+}
+
+.ag-usp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.ag-usp-content h2 {
+  color: #790d07;
+}
+
+.ag-usp-cool-numbers {
+  display: grid;
+  gap: 30px;
+  /* padding: 40px 20px; */
+  text-align: center;
+}
+.ag-usp-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #790d07;
+  min-height: 200px;
+  border-radius: 10px;
+}
+
+.ag-usp-item h3 {
+  font-size: 36px;
+  color: #790d07;
+  margin-bottom: 10px;
+}
+
+.ag-usp-item p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .ag-usp-cool-numbers {
+    grid-template-columns: 1fr;
+  }
+  .ag-usp-content {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ag-usp-cool-numbers {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
