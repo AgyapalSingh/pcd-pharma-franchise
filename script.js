@@ -26,7 +26,7 @@ new Swiper(".product-card-wrapper", {
       slidesPerView: 3,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
   },
 });

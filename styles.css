@@ -320,6 +320,7 @@
   gap: 30px;
   width: 100%;
   max-width: 1280px;
+  padding-bottom: 30px;
 }
 
 .ag-usp-content-sec-item {
@@ -357,12 +358,82 @@
   }
   .ag-usp-content-sec {
     width: 95%;
-     flex-direction: column;
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 768px) {
   .ag-usp-cool-numbers {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*  REVIEWS Section *************************************************************************************************************************************************************/
+.ag-reviews-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+}
+
+.ag-reviews-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.ag-reviews-content h2 {
+  color: #790d07;
+}
+
+.ag-reviews-section-wrapper {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.product-card-wrapper {
+  margin: 0px 50px;
+  overflow: hidden;
+}
+
+.card-item-reviews {
+  gap: 30px;
+}
+
+.client-name {
+  text-align: center;
+  font-size: 16px;
+}
+.client-review {
+  text-align: center;
+  font-style: italic;
+}
+.client-location{
+   font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .ag-reviews-content {
+    width: 95%;
+  }
+
+  .ag-reviews-section-wrapper {
+    width: 95%;
   }
 }
