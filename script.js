@@ -38,10 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const animateCounter = (el) => {
     const target = parseInt(el.getAttribute("data-target"));
+    const suffix = el.getAttribute("data-suffix") || "";
     let current = 0;
     const speed = target < 100 ? 1 : Math.ceil(target / 100);
-
-    const suffix = el.textContent.includes("%") ? "%" : "+";
 
     const update = () => {
       current += speed;
@@ -73,4 +72,47 @@ document.addEventListener("DOMContentLoaded", () => {
   counters.forEach((el) => {
     observer.observe(el);
   });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter-sec");
+
+  const formatWithCommas = (num) => {
+    return num.toLocaleString("en-IN");
+  };
+
+  const animateCounter = (el) => {
+    const target = parseInt(el.getAttribute("data-target"));
+    let current = 0;
+    const speed = Math.max(1, Math.floor(target / 100));
+
+    const update = () => {
+      current += speed;
+      if (current >= target) {
+        el.textContent = formatWithCommas(target);
+      } else {
+        el.textContent = formatWithCommas(current);
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.6,
+    }
+  );
+
+  counters.forEach((counter) => observer.observe(counter));
 });

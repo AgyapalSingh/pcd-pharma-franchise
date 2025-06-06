@@ -281,10 +281,9 @@
 .ag-usp-content h2 {
   color: #790d07;
 }
-.ag-usp-content a{
+.ag-usp-content a {
   text-decoration: none;
   color: #790d07;
-  
 }
 
 .ag-usp-cool-numbers {
@@ -313,6 +312,40 @@
   font-size: 16px;
   color: #555;
   margin: 0;
+}
+
+.ag-usp-content-sec {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.ag-usp-content-sec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ag-usp-content-sec-item h2 {
+  color: #790d07;
+}
+
+.ag-usp-item-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #790d07;
+  min-height: 200px;
+  border-radius: 10px;
+}
+
+.ag-usp-item-sec h3 {
+  font-size: 36px;
+  color: #790d07;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 767px) {
