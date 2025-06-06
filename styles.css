@@ -27,6 +27,7 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+  width: 100%;
 }
 
 .ag-bg-video {
@@ -123,7 +124,7 @@
 .ag-products-section-wrapper {
   display: flex;
   max-width: 1280px;
-  overflow: hidden;
+  width: 100%;
 }
 
 .card-link {
@@ -145,6 +146,7 @@
 .swiper-slide-button {
   color: #9c0900 !important;
   font-size: 14px !important;
+  width: 100%;
 }
 
 .swiper-button-next:after,
@@ -155,6 +157,16 @@
 
 .swiper-pagination-bullet-active {
   background-color: #9c0900 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .ag-products-content {
+    width: 95%;
+  }
+
+  .ag-products-section-wrapper {
+    width: 95%;
+  }
 }
 
 /*  CERTIFICATION SECTION *************************************************************************************************************************************************************/
