@@ -109,6 +109,12 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .ag-intro-content {
+    width: 95%;
+  }
+}
+
 /*  Product Section *************************************************************************************************************************************************************/
 .ag-products-section {
   display: flex;
@@ -175,6 +181,16 @@
 }
 
 @media screen and (max-width: 768px) {
+  .ag-products-content {
+    width: 95%;
+  }
+
+  .ag-products-section-wrapper {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
   .ag-products-content {
     width: 95%;
   }
@@ -253,6 +269,16 @@
   .ag-Certi-content {
     width: 95%;
   }
+  .ag-Certi-logos-infinite {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .ag-Certi-content {
+    width: 95%;
+  }
+
   .ag-Certi-logos-infinite {
     width: 95%;
   }
@@ -369,6 +395,16 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .ag-usp-content {
+    width: 95%;
+  }
+
+  .ag-usp-content-sec {
+    width: 95%;
+  }
+}
+
 /*  REVIEWS Section *************************************************************************************************************************************************************/
 .ag-reviews-section {
   display: flex;
@@ -439,6 +475,16 @@
   }
 }
 
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .ag-reviews-content {
+    width: 95%;
+  }
+
+  .ag-reviews-section-wrapper {
+    width: 95%;
+  }
+}
 /*  FAQs Section *************************************************************************************************************************************************************/
 
 .ag-accordion {
@@ -501,6 +547,14 @@
 }
 
 @media screen and (max-width: 768px) {
+  .ag-accordion-content {
+    width: 95%;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
   .ag-accordion-content {
     width: 95%;
   }
