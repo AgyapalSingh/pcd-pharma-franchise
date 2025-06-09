@@ -238,7 +238,7 @@
   display: flex;
   width: max-content;
   gap: 60px;
-  animation: scroll-continuous 10s linear infinite;
+  animation: scroll-continuous 30s linear infinite;
 }
 
 .ag-logo-track div {
@@ -247,7 +247,7 @@
 }
 
 .ag-logo-track img {
-  width: 120px;
+  width: 150px;
   height: auto;
   object-fit: contain;
 }
